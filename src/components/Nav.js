@@ -3,9 +3,12 @@ import { Outlet, Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <>
+    <div>
       <nav>
         <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>
             <Link to="/users">Users</Link>
           </li>
@@ -22,7 +25,7 @@ function Navigation() {
       </nav>
 
       <Outlet />
-    </>
+    </div>
   );
 }
 

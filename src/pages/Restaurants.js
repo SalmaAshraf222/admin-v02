@@ -1,18 +1,28 @@
+import Navigation from "../components/Nav";
 import Table from "../components/Table";
 import AddRestaurantForm from "../components/forms/AddRestaurantForm";
-import restaurantsheaders from "../Data";
-import restaurantsData from "../Data";
+import * as data from "../Data";
 
 const Restaurants = () => {
   return (
-    <div className="group">
+    <div className="container-fluid gx-0">
+      <Navigation />
+
       <Table
         name="Restaurant"
-        headers={restaurantsheaders}
-        data={restaurantsData}
+        headers={data.restaurantsheaders}
+        data={data.restaurantsData}
       />
       <AddRestaurantForm />
     </div>
   );
 };
 export default Restaurants;
+
+{/* <div className="container-fluid gx-0 ">
+      <Navigation />
+
+      <Table name="User" headers={data.usersHeaders} data={data.usersData} />
+
+      <AddUserForm />
+    </div> */}

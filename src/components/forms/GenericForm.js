@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function GenericForm({ fields, onSubmit }) {
+const GenericForm=({ fields, onSubmit }) =>{
   const [formState, setFormState] = useState({});
 
   const handleChange = (event) => {
@@ -14,7 +14,9 @@ function GenericForm({ fields, onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="container-fluid">
+      {/* <div className="row d-flex flex-column justify-content-around"> */}
+    <form className='p-5' onSubmit={handleSubmit}>
       {fields.map((field) => (
         <div key={field.name}>
           <label htmlFor={field.name}>{field.label}</label>
@@ -27,8 +29,10 @@ function GenericForm({ fields, onSubmit }) {
           />
         </div>
       ))}
-      <button type="submit">Submit</button>
+      <button className='mt-5'  type="submit">Submit</button>
     </form>
+    {/* </div> */}
+    </div>
   );
 }
 

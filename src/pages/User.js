@@ -1,20 +1,14 @@
 import Table from "../components/Table";
+import Navigation from "../components/Nav";
 import AddUserForm from "../components/forms/AddUserForm";
-import {
-  usersData,
-  restaurantsData,
-  hotelsData,
-  attractionsData,
-  usersHeaders,
-  restaurantsheaders,
-  hotelsheaders,
-  attarctionsHeader,
-} from "../Data";
+import * as data from "../Data";
 
 const Users = () => {
   return (
-    <div className="group">
-      <Table name="User" headers={usersHeaders} data={usersData} />
+    <div className="container-fluid gx-0 ">
+      <Navigation />
+
+      <Table name="User" headers={data.usersHeaders} data={data.usersData} />
 
       <AddUserForm />
     </div>

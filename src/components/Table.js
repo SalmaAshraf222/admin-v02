@@ -2,17 +2,25 @@ import React from "react";
 
 const Table = ({ name, headers, data }) => {
   return (
-    <section>
-      <h2>{name}</h2>
-      <table>
-        <thead>
+    <div className="container-fluid">
+      <div className="row mx-auto" >
+        
+      <h1 className="m-5 mb-3 ms-4"><strong><u><em>{name}</em></u></strong></h1>
+      
+      <table style={{
+       // tableLayout: "fixed",
+//width: "100%",
+wordBreak:"break-all"}}>
+        <thead >
           <tr>
             {headers.map((header) => (
-              <th key={header}>{header}</th>
+              <th scope="col" key={header}>{header}
+              </th>
             ))}
             <th>Actions</th>
           </tr>
         </thead>
+        
         <tbody>
           {data.map((row) => (
             <tr key={row.id}>
@@ -26,7 +34,8 @@ const Table = ({ name, headers, data }) => {
           ))}
         </tbody>
       </table>
-    </section>
+      </div>
+    </div>
   );
 };
 

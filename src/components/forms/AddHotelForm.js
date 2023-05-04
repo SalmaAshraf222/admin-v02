@@ -47,11 +47,19 @@ function AddHotelForm({ onSubmit }) {
   ];
 
   return (
-    <section>
-      <h2>Add Hotel</h2>
+    <div className="container-fluid">
+      <h1 className="m-5 mb-3 ms-4"><strong><u><em>Add Hotel</em></u></strong></h1>
       <GenericForm fields={fields} onSubmit={onSubmit} />
-    </section>
+    </div >
   );
 }
 
 export default AddHotelForm;
+
+{/* <div className="container-fluid">
+      <h1 className="m-5 mb-3 ms-4"><strong><u><em>Add Hotel</em></u></strong></h1>
+      <GenericForm
+       fields={fields}
+        onSubmit={onSubmit} 
+        />
+    </div> */}
