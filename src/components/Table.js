@@ -2,7 +2,8 @@ import React from "react";
 
 const Table = ({ name, headers, data }) => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid"
+    >
       <div className="row mx-auto" >
         
       <h1 className="m-5 mb-3 ms-4"><strong><u><em>{name}</em></u></strong></h1>

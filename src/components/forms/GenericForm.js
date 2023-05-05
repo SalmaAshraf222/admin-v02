@@ -14,13 +14,17 @@ const GenericForm=({ fields, onSubmit }) =>{
   };
 
   return (
-    <div className="container-fluid">
-      {/* <div className="row d-flex flex-column justify-content-around"> */}
-    <form className='p-5' onSubmit={handleSubmit}>
+    <div className="container-fluid d-flex flex-row justify-content-center ">
+
+      <div className="row  w-100 d-flex flex-row justify-content-center">
+        <div className="col-md-6">
+        <form className=" rounded shadow  mt-5 " onSubmit={handleSubmit}
+    style={{backgroundColor:"rgba(231, 109, 36, 0.4)"}}>
+      
       {fields.map((field) => (
-        <div key={field.name}>
+        <div className="w-25  " key={field.name}>
           <label htmlFor={field.name}>{field.label}</label>
-          <input
+          <input className="rounded "
             type={field.type}
             id={field.name}
             name={field.name}
@@ -29,9 +33,11 @@ const GenericForm=({ fields, onSubmit }) =>{
           />
         </div>
       ))}
-      <button className='mt-5'  type="submit">Submit</button>
+      <button className="btn btn-outline-light btn-rounded mt-5"  type="submit">Submit</button>
     </form>
-    {/* </div> */}
+        </div>
+      </div>
+  
     </div>
   );
 }

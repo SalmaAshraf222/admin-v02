@@ -2,10 +2,15 @@ import Navigation from "../components/Nav";
 import Table from "../components/Table";
 import AddRestaurantForm from "../components/forms/AddRestaurantForm";
 import * as data from "../Data";
+import decor from "../assets/Decore.png"
 
 const Restaurants = () => {
   return (
-    <div className="container-fluid gx-0">
+    <div className="container-fluid gx-0 bg-img"
+    style={{backgroundImage: `url(${decor})` ,
+    backgroundPosition:"right top",
+    backgroundSize: "100%",
+    backgroundRepeat: "no-repeat"}}>
       <Navigation />
 
       <Table

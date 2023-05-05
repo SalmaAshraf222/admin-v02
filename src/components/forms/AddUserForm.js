@@ -22,7 +22,7 @@ function AddUserForm({ onSubmit }) {
   ];
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid ">
       <h1 className="m-5 mb-3 ms-4"><strong><u><em>Add User</em></u></strong></h1>
       <GenericForm
        fields={fields}

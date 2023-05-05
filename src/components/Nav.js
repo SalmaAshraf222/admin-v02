@@ -4,22 +4,22 @@ import { Outlet, Link } from "react-router-dom";
 function Navigation() {
   return (
     <div>
-      <nav>
+      <nav  style={{backgroundColor:"rgba(242, 161, 30, 0.2)"}}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link style={{color:"black"}} to="/">Home</Link>
           </li>
           <li>
-            <Link to="/users">Users</Link>
+            <Link style={{color:"black"}} to="/users">Users</Link>
           </li>
           <li>
-            <Link to="/attractions">Attractions</Link>
+            <Link style={{color:"black"}} to="/attractions">Attractions</Link>
           </li>
           <li>
-            <Link to="/hotels">Hotels</Link>
+            <Link style={{color:"black"}} to="/hotels">Hotels</Link>
           </li>
           <li>
-            <Link to="/restaurants">Restaurants</Link>
+            <Link style={{color:"black"}} to="/restaurants">Restaurants</Link>
           </li>
         </ul>
       </nav>
