@@ -5,6 +5,7 @@ import {restaurantsheaders} from "../Data";
 import decor from "../assets/Decore.png"
 import { useState , useEffect } from "react";
 import  {restaurantController} from "../api";
+import Pag from "../components/pagination/pagination";
 
 
 const Restaurants = () => {
@@ -38,6 +39,7 @@ const Restaurants = () => {
         data={restaurants}
 
       />
+      <Pag/>
       <AddRestaurantForm />
     </div>
   );
