@@ -10,16 +10,16 @@ const Table = ({ name, headers, data }) => {
   return (
     <div className="container-fluid"
     >
-      <div className="row mx-auto" >
+      <div className="row mx-auto " >
         
       <h1 className="m-5 mb-3 ms-4"><strong><u><em>{name}</em></u></strong></h1>
       
-      <table style={{
-       // tableLayout: "fixed",
-//width: "100%",
+      <table className="table  table-bordered table-condensed" style={{
+       tableLayout: "fixed",
+width: "100%",
 wordBreak:"break-all"}}>
-        <thead >
-          <tr>
+        <thead  >
+          <tr className="table-active">
             {headers.map((header) => (
               <th scope="col" key={header}>{header}
               </th>

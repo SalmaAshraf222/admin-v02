@@ -5,6 +5,7 @@ import Navigation from "../components/Nav";
 import decor from "../assets/Decore.png"
 import { useEffect , useState } from "react";
 import { attarctionsHeader } from '../Data'
+import Pag from "../components/pagination/pagination";
 
 
 const Attractions = () => {
@@ -37,7 +38,7 @@ const Attractions = () => {
     <Table name="Attraction"
      headers={attarctionsHeader}
       data={attractions} />
-
+<Pag/>
   <AddAttractionForm />
   </div>
   );
