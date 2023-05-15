@@ -5,6 +5,7 @@ import {hotelsData , hotelsheaders} from "../Data";
 import decor from "../assets/Decore.png";
 import { useEffect , useState } from "react";
 import {hotelController} from '../api'
+import Pag from "../components/pagination/pagination";
 
 /*
   1-
@@ -51,7 +52,7 @@ const Hotels = () => {
       <Navigation />
 
       <Table name="Hotel" headers={hotelsheaders} data={hotels} />
-
+<Pag/>
       <AddHotelForm />
     </div>
   );
