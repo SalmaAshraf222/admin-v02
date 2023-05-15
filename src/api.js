@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = "http://localhost:3001/api";
+export const BASE_URL = "http://localhost:3004/api";
 const HOTELS_URL = "/hotels";
 
 export const hotelController = {
