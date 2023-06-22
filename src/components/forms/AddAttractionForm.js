@@ -13,10 +13,14 @@ function AddAttractionForm({ onSubmit }) {
   ];
 
   return (
-    <section>
-      <h2>Add Attraction</h2>
-      <GenericForm fields={fields} onSubmit={onSubmit} submitButtonText="Add Attraction" />
-    </section>
+    <div className="container-fluid">
+      <h1 className="m-5 mb-3 ms-4"><strong><u><em>Add Attraction</em></u></strong></h1>
+      <GenericForm
+       fields={fields}
+        onSubmit={onSubmit} 
+        />
+    </div>
+   
   );
 }
 

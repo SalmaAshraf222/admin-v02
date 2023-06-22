@@ -22,10 +22,13 @@ function AddUserForm({ onSubmit }) {
   ];
 
   return (
-    <section>
-      <h2>Add User</h2>
-      <GenericForm fields={fields} onSubmit={onSubmit} />
-    </section>
+    <div className="container-fluid ">
+      <h1 className="m-5 mb-3 ms-4"><strong><u><em>Add User</em></u></strong></h1>
+      <GenericForm
+       fields={fields}
+        onSubmit={onSubmit} 
+        />
+    </div>
   );
 }
 

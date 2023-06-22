@@ -1,27 +1,32 @@
-import React from 'react';
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
 function Navigation() {
-    return (
-      <nav>
+  return (
+    <div>
+      <nav  style={{backgroundColor:"rgba(242, 161, 30, 0.2)"}}>
         <ul>
           <li>
-            <a href="#">Users</a>
+            <Link style={{color:"black"}} to="/">Home</Link>
           </li>
           <li>
-            <a href="#">Restaurants</a>
+            <Link style={{color:"black"}} to="/users"> Users</Link>
           </li>
           <li>
-            <a href="#">Hotels</a>
+            <Link style={{color:"black"}} to="/attractions"> Attractions</Link>
           </li>
           <li>
-            <a href="#">Attractions</a>
+            <Link style={{color:"black"}} to="/hotels"> Hotels</Link>
           </li>
           <li>
-            <a href="#">Logout</a>
+            <Link style={{color:"black"}} to="/restaurants"> Restaurants</Link>
           </li>
         </ul>
       </nav>
-    );
-  }
-  
-  export default Navigation;
+
+      <Outlet />
+    </div>
+  );
+}
+
+export default Navigation;

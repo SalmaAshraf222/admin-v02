@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function GenericForm({ fields, onSubmit }) {
+const GenericForm=({ fields, onSubmit }) =>{
   const [formState, setFormState] = useState({});
 
   const handleChange = (event) => {
@@ -14,11 +14,17 @@ function GenericForm({ fields, onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="container-fluid d-flex flex-row justify-content-center ">
+
+      <div className="row  w-100 d-flex flex-row justify-content-center">
+        <div className="col-md-6">
+        <form className=" rounded shadow  mt-5 " onSubmit={handleSubmit}
+    style={{backgroundColor:"rgba(231, 109, 36, 0.4)"}}>
+      
       {fields.map((field) => (
-        <div key={field.name}>
+        <div className="w-25  " key={field.name}>
           <label htmlFor={field.name}>{field.label}</label>
-          <input
+          <input className="rounded "
             type={field.type}
             id={field.name}
             name={field.name}
@@ -27,8 +33,12 @@ function GenericForm({ fields, onSubmit }) {
           />
         </div>
       ))}
-      <button type="submit">Submit</button>
+      <button className="btn btn-outline-light btn-rounded mt-5"  type="submit">Submit</button>
     </form>
+        </div>
+      </div>
+  
+    </div>
   );
 }
 

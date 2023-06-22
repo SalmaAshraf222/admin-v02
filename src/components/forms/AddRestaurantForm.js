@@ -31,11 +31,15 @@ function AddRestaurantForm({ onSubmit }) {
   ];
 
   return (
-    <section>
-      <h2>Add Restaurant</h2>
-      <GenericForm fields={fields} onSubmit={onSubmit} />
-    </section>
+    <div className="container-fluid">
+      <h1 className="m-5 mb-3 ms-4"><strong><u><em>Add Restaurant</em></u></strong></h1>
+      <GenericForm
+       fields={fields}
+        onSubmit={onSubmit} 
+        />
+    </div>
   );
 }
 
 export default AddRestaurantForm;
+
