@@ -1,20 +1,27 @@
-import icon from "../../assets/iconbw.png";
+import icon from "../../assets/icon2.png";
 
 const Welcome = () => {
   return (
     <div
-      className="container-fluid  d-flex flex-column justify-content-center"
+      className="container-fluid  d-flex flex-column justify-content-center  "
       style={{ height: "100vh" }}
     >
       <div className="row d-flex flex-row justify-content-around h-50">
 
-        <div className="col-4 border-light rounded shadow-sm p-5 bg-white d-flex flex-column justify-content-center">
-          <h1>Welcome to Rahals admin panel!</h1>
-          <h3>You can track your activity here. </h3>
+         <div className=" col-lg-4 mt-lg-5" 
+          style={{
+            color:"#8F9090",
+         
+          }}>
+          <h1 className="mt-lg-5">Welcome to Rahals admin panel!</h1>
+          <h3 className="mt-lg-5">You can track your activity here. </h3>
         </div>
-        <div className="col-4 d-flex flex-row justify-content-center  border-light rounded shadow-sm p-5 bg-white">
-          <img src={icon} />
+
+        <div className="col-lg-4" >
+<img  src={icon}
+style={{height:"400px"}}/>
         </div>
+
       </div>
     </div>
   );

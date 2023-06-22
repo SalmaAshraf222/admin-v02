@@ -4,19 +4,19 @@ import GenericForm from './GenericForm';
 function AddHotelForm({ onSubmit }) {
   const fields = [
     { name: 'name', type: 'text', label: 'Name:', required: true },
-    { name: 'city', type: 'text', label: 'City:', required: true },
-    { name: 'image', type: 'text', label: 'Image:' },
-    {
-      name: 'priceLevel',
-      type: 'select',
-      label: 'Price Level:',
-      options: [
-        { value: '', label: 'Select Price Level' },
-        { value: '$', label: 'Low' },
-        { value: '$$', label: 'Medium', selected: true },
-        { value: '$$$', label: 'High' },
-      ],
-    },
+    // { name: 'city', type: 'text', label: 'City:', required: true },
+    // { name: 'image', type: 'text', label: 'Image:' },
+    // {
+    //   name: 'priceLevel',
+    //   type: 'select',
+    //   label: 'Price Level:',
+    //   options: [
+    //     { value: '', label: 'Select Price Level' },
+    //     { value: '$', label: 'Low' },
+    //     { value: '$$', label: 'Medium', selected: true },
+    //     { value: '$$$', label: 'High' },
+    //   ],
+    // },
     {
       name: 'rating',
       type: 'number',
@@ -41,14 +41,14 @@ function AddHotelForm({ onSubmit }) {
       max: '5',
       value: '0',
     },
-    { name: 'phone', type: 'text', label: 'Phone:', unique: true },
-    { name: 'address', type: 'text', label: 'Address:' },
-    { name: 'location', type: 'text', label: 'Location:' },
+    { name: 'phone', type: 'text', label: 'Phone number:', unique: true },
+    // { name: 'address', type: 'text', label: 'Address:' },
+    // { name: 'location', type: 'text', label: 'Location:' },
   ];
 
   return (
     <div className="container-fluid">
-      <h1 className="m-5 mb-3 ms-4"><strong><u><em>Add Hotel</em></u></strong></h1>
+      <h1 className="m-5 mb-3 ms-4" style={{color:"#8F9090"}}><strong>Add Hotel</strong></h1>
       <GenericForm fields={fields} onSubmit={onSubmit} />
     </div >
   );

@@ -120,7 +120,7 @@ export const attractionsData = [
 ];
 
 export const usersHeaders = [
-  "#",
+  "id",
   "Name",
   "Email",
   "Role",
@@ -130,40 +130,31 @@ export const usersHeaders = [
 ];
 
 export const restaurantsheaders = [
-  "ID",
   "Name",
-  "Name",
-  "image",
-  "Price Level",
-  "phone",
-  "describtion",
-  "Number Reviews",
+  "Rating",
+  "Phone number",
   "Cuisine",
-  "actions",
+  "Number of reviews",
+  
+  
 ];
 
 export const hotelsheaders = [
-  "Id",
   "Name",
-  "Image",
-  "Price Level",
   "Rating",
-  "Number of Reviews",
-  "Hotel Class",
-  "Phone",
-  "Address",
-  "Location",
+  "Number of reviews",
+  "Hotel class",
+  "Phone number",
+  
 ];
 
 export const attarctionsHeader = [
-  "#",
-  "#",
-  "#",
   "Name",
-  "Image",
   "Rating",
-  "Number",
+  "Number of reviews",
   "Description",
-  "Location",
-  "Activity",
+  "Type",
+  
+  
+ 
 ];

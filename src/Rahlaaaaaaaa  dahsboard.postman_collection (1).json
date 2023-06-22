@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "315b7d80-32f6-41f5-ad36-0a3036955145",
+		"name": "Rahlaaaaaaaa  dahsboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12796607"
+	},
+	"item": [
+		{
+			"name": "attractions",
+			"item": [
+				{
+					"name": "Get All  attractions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/attractions?page=1&limit=5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"attractions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Attraction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/attractions/6436caa2994c1a56b301b187",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"attractions",
+								"6436caa2994c1a56b301b187"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Attraction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/attractions/6436caa2994c1a56b301b088",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"attractions",
+								"6436caa2994c1a56b301b088"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Attraction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testing the create Tour endPoint now\" ,\r\n    \"age\" : 20 , \r\n    \"email\" : \"test@gmail.com\" , \r\n    \"passwordChangedAt\" : \"2019-4-4\" \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/attractions",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"attractions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Attraction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"name\": \"TestTestTest\" ,\r\n    \"image\": \"TestTestTest\" ,\r\n    \"rating\": 4.5 ,\r\n    \"description\": \"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTest\" ,\r\n    \"activityDesctiptor\": \"TestTestTest\" \r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/attractions/63f9ac0724cdbb34bc6cc5b5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"attractions",
+								"63f9ac0724cdbb34bc6cc5b5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hotels",
+			"item": [
+				{
+					"name": "Get All  hotels",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/hotels",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hotel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/hotels/6436caa2994c1a56b301b0e9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hotels",
+								"6436caa2994c1a56b301b0e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Hotel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/hotels/6436caa2994c1a56b301b288",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hotels",
+								"6436caa2994c1a56b301b288"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testing the create Tour endPoint now\" ,\r\n    \"age\" : 20 , \r\n    \"email\" : \"test@gmail.com\" , \r\n    \"passwordChangedAt\" : \"2019-4-4\" \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/hotels",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Hotel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testing the create Tour endPoint now\" ,\r\n    \"difficulty\" : \"easy\" ,\r\n    \"price\" : 200,\r\n    \"passwordChangedAt\" : \"2023-4-4\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/hotels/63f9ac0724cdbb34bc6cc5b5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hotels",
+								"63f9ac0724cdbb34bc6cc5b5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All in active  hotels",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "restaurants",
+			"item": [
+				{
+					"name": "Get All  restaurants",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/restaurants",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Restaurant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/restaurants/6436caa2994c1a56b301afa4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"restaurants",
+								"6436caa2994c1a56b301afa4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Restaurant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/restaurants/63f896bb2e37124abe8f2983",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"restaurants",
+								"63f896bb2e37124abe8f2983"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testing the create Tour endPoint now\" ,\r\n    \"age\" : 20 , \r\n    \"email\" : \"test@gmail.com\" , \r\n    \"passwordChangedAt\" : \"2019-4-4\" \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/restaurants",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Restaurant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testing the create Tour endPoint now\" ,\r\n    \"difficulty\" : \"easy\" ,\r\n    \"price\" : 200,\r\n    \"passwordChangedAt\" : \"2023-4-4\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/cities/city/restaurants/63f9ac0724cdbb34bc6cc5b5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"cities",
+								"city",
+								"restaurants",
+								"63f9ac0724cdbb34bc6cc5b5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all in active rest",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

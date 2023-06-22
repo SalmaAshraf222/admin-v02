@@ -1,46 +1,48 @@
-import React from "react";
 
+const Table = ({ name, headers, data,header }) => {
 
-
-
-const Table = ({ name, headers, data }) => {
-
-  console.log(data);
-
+  
+  
   return (
     <div className="container-fluid"
     >
       <div className="row mx-auto " >
         
-      <h1 className="m-5 mb-3 ms-4"><strong><u><em>{name}</em></u></strong></h1>
+      <h1 className="m-5 mb-3 ms-4 " style={{color:"#8F9090"}}><strong>{name}</strong></h1>
       
-      <table className="table  table-bordered table-condensed" style={{
+      <table className="table border border-grey shadow  " 
+      style={{
        tableLayout: "fixed",
-width: "100%",
+       height:"20px",
+       overflow:"auto",
 wordBreak:"break-all"}}>
         <thead  >
-          <tr className="table-active">
+          <tr 
+          className="table"
+>
             {headers.map((header) => (
-              <th scope="col" key={header}>{header}
+              <th style={{backgroundColor:"#F2A11E",color:"white"}} scope="col" key={header}>{header}
               </th>
             ))}
-            <th>Actions</th>
+            <th style={{backgroundColor:"#F2A11E",color:"white"}}>Actions</th>
           </tr>
         </thead>
         
-        <tbody>
+        <tbody style={{backgroundColor:"white"}}>
 
           {
             data.map((row) => (
-              <tr key={row.id}>
-                {Object.keys(row).map((key) => (
-                  <td key={key}>{row[key]}</td>
-
+              <tr  key={row.key}>
+                { 
+                 Object.keys(row).map((key) => (
+                  <td 
+                   key={key}>{row[key]}</td>                
+                  
                 ))}
                 <td>
 
-                  <a href={`127.0.0.1/api/restaurants/${row.id}`} > Edit</a> | <a href="127.0.0.1/api/restaurants/${row.id}" >Delete</a>
-
+                  <button className="btn btn-light"> Edit</button> 
+                
                   
                 </td>
               </tr>
@@ -57,32 +59,4 @@ wordBreak:"break-all"}}>
 
 export default Table;
 
-//function Table({ name, headers, data }) {
-//   return (
-//     <section>
-//       <h2>{name}</h2>
-//       <table>
-//         <thead>
-//           <tr>
-//             {headers.map((header) => (
-//               <th key={header}>{header}</th>
-//             ))}
-//             <th>Actions</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {data.map((row) => (
-//             <tr key={row.id}>
-//               {Object.keys(row).map((key) => (
-//                 <td key={key}>{row[key]}</td>
-//               ))}
-//               <td>
-//                 <a href="#">Edit</a> | <a href="#">Delete</a>
-//               </td>
-//             </tr>
-//           ))}
-//         </tbody>
-//       </table>
-//     </section>
-//   );
-// }
+

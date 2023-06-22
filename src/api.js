@@ -3,11 +3,35 @@ import axios from "axios";
 export const BASE_URL = "http://localhost:3004/api";
 const HOTELS_URL = "/hotels";
 
+
+const config = {
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQ2NjJhODJiNGE0MWUyNGUwMWEzNiIsImlhdCI6MTY4NzQ0NzA4MiwiZXhwIjoxNjk1MjIzMDgyfQ.pvNNxP55cD0mJuQkIE-jwK7DsaBIyA1kyl7paXqWwxI`
+  }
+};
+
+
+const deleteId=(obj)=>{
+  console.log(obj);
+  
+  obj.docuemnts.map(element => {
+    delete element._id
+    delete element.phone
+    if(!element.phone ){
+        element.phone = "xxxxx" ; 
+    }    
+   
+  });
+  console.log(obj.docuemnts);
+}
+
 export const hotelController = {
   gethotels: async  () => {
     try {
-      const response = await axios.get(`${BASE_URL}${HOTELS_URL}?fields=-location`);
+      const response = await axios.get(`${BASE_URL}${HOTELS_URL}?fields=-location,-image,-priceLevel,-__v,-id,-_id,-status` , config);
 
+      deleteId(response.data.data) ;
       return response.data.data;
     } catch (error) {
       console.log(error);
@@ -53,13 +77,23 @@ export const hotelController = {
       throw error;
     }
   },
+  getHotelRequests : async () => {
+         try {
+           const response = await axios.get(`${BASE_URL}/hotels/InActiveHotels`)
+           return response.data.data
+         } catch (error) {console.log(error)}
+       }
+
 };
 
 
 export const attractionController = {
   getAttractions: async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/attractions?fields=-location`);
+      const response = await axios.get(`${BASE_URL}/attractions?fields=-location,-image,-__v,-id,-_id,-type`,
+      );
+      deleteId(response.data.data) ;
+
       return response.data.data;
     } catch (error) {
       console.error(error);
@@ -118,13 +152,40 @@ export const attractionController = {
 export const restaurantController = {
   getRestaurants: async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/restaurants?fields=-location`);
+      const response = await axios.get(`http://localhost:3004/api/restaurants?fields=-location,-image,-priceLevel,-__v,-id,-_id`, config);
+      
+      deleteId(response.data.data) ;
+
+      
       return response.data.data;
     } catch (error) {
-      console.error(error);
+      // console.log(error);
       throw error;
     }
   },
+
+  // getAttractions: async () => {
+  //   try {
+  //     const response = await axios.get(`${BASE_URL}/attractions?fields=-location,-image,-__v,-id,-_id,-type`,
+  //     );
+  //     return response.data.data;
+  //   } catch (error) {
+  //     console.error(error);
+  //     throw error;
+  //   }
+  // },
+
+  // gethotels: async  () => {
+  //   try {
+  //     const response = await axios.get(`${BASE_URL}${HOTELS_URL}?fields=-location,-image,-priceLevel,-__v,-id,-_id,-status` , config);
+  //     deleteId(response.data.data) ;
+  //     return response.data.data;
+  //   } catch (error) {
+  //     console.log(error);
+  //     throw error;
+  //   }
+  // },
+
   getRestaurant: async (id) => {
     try {
       const response = await axios.get(`${BASE_URL}/restaurants/${id}`);
@@ -167,4 +228,13 @@ export const restaurantController = {
       throw error;
     }
   },
+  getRestaurantsRequests : async () => {
+    try {
+      const response = await axios.get(`${BASE_URL}/restaurants/inactiveRest`)
+      return response.data.data
+    } catch (error) {console.log(error)}
+  }
+
 };
+
+

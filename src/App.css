@@ -52,11 +52,36 @@ table {
   width: 100%;
 }
 
-table th, table td,table tr {
+/* .react-bootstrap-table {
+  height: 500px;
+  overflow: auto;
+} */
+
+/* table 
+th,
+ table tr 
+ {
   padding: 10px;
   text-align: left;
   border: 5px solid #6f6d6d;
+  overflow: auto; 
+   height: 50vh;
 }
+
+ table tbody{
+  height: 50vh;
+
+} 
+table td{
+  height: 20vh;
+  overflow: hidden; 
+  overflow: scroll;
+  top: 20px;
+   width: 3000px;
+  height: 10vh;
+  overflow: auto;
+
+} */
 
 form {
   margin: 20px;

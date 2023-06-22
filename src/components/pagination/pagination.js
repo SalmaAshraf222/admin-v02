@@ -1,21 +1,35 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-
-const Pag = () => {
+import "./pagination.css";
+const Pagination = ({ totalPosts, postsPerPage, setCurrentPage }) => {
+  let pages = [];
+  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+    pages.push(i);
+  }
   return (
-    <div className=" d-flex flex-row justify-content-center ">
-    <nav className=" w-25 mt-5 d-flex flex-row justify-content-center"
-    style={{backgroundColor:"inherit"}}
-    aria-label="More table content">
-    <ul className="pagination pagination-sm">
-      <li className="page-item ">
-        <a className="page-link" href="#" tabindex="-1">1</a>
-      </li>
-      <li className="page-item">
-        <a className="page-link" href="#">2</a></li>
-      {/* <li className="page-item"><a className="page-link" href="#">3</a></li> */}
-    </ul>
-  </nav>
-  </div>
+    <div className="container-fluid">
+      <div className="row pagination mt-3">
+        {pages
+          .filter((page) => page < 11)
+          .map((page, index) => {
+            return (
+              <button key={index} onClick={() => setCurrentPage(page)}>
+                {page}
+              </button>
+            );
+          })}
+      </div>
+
+      <div className="row pagination mt-3">
+        {pages
+          .filter((page) => page > 11)
+          .map((page, index) => {
+            return (
+              <button key={index} onClick={() => setCurrentPage(page)}>
+                {page}
+              </button>
+            );
+          })}
+      </div>
+    </div>
   );
 };
-export default Pag;
+export default Pagination;
